@@ -1,35 +1,273 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESTUDIO SEMAC-TEC - Abogados en Extranjería y Mediación</title>
+  <title>ESTUDIO "SEMAS-TECH" - Abogados en Extranjería y Mediación</title>
+
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; }
-    header { background-color: #1f3b57; color: white; padding: 20px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    .hero { background-color: #1f3b57; color: white; padding: 100px 20px; text-align: center; }
+
+    .video-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.video-galeria iframe {
+  width: 210px;
+  height: 350px;
+  border-radius: 0px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+    .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  background-color: #25d366;
+  border-radius: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 110px;
+  height: 110px;
+}
+
+  .carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+  body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  background-color: #d6eaf8; /* azul claro */
+  color: #000; /* letras negras */
+}
+
+    header {
+      background-color: #1f3b57;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+  background: url('img/banner-portada.jpg') center center no-repeat;
+  background-size: cover;
+  height: 420px;
+}
+
+
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero-text {
+      flex: 1 1 600px;
+      padding: 10px;
+    }
+
+    .hero-images {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .hero-images img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
     .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
-    .btn { background-color: #ffc107; color: #333; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    footer { background-color: #1f3b57; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
-    form { display: flex; flex-direction: column; }
-    form input, form textarea { margin-bottom: 10px; padding: 10px; font-size: 1rem; }
-    form button { padding: 10px; background-color: #1f3b57; color: white; border: none; font-weight: bold; cursor: pointer; }
-    .social-icons a { margin: 0 10px; font-size: 1.5rem; color: #1f3b57; }
-    iframe { width: 100%; height: 300px; border: none; }
-    .video-gallery iframe { margin-bottom: 20px; width: 100%; height: 315px; }
-  </style>
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+.btn {
+  background-color: #25D366; /* Verde WhatsApp */
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #1ebe5d;
+}
+
+section { padding: 40px 20px; max-width: 900px; margin: auto; }
+footer { background-color: #1f3b57; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+form { display: flex; flex-direction: column; }
+form input, form textarea { margin-bottom: 10px; padding: 10px; font-size: 1rem; }
+form button { padding: 10px; background-color: #1f3b57; color: white; border: none; font-weight: bold; cursor: pointer; }
+.social-icons a { margin: 0 10px; font-size: 1.5rem; color: #1f3b57; }
+iframe { width: 100%; height: 300px; border: none; }
+.video-gallery iframe { margin-bottom: 20px; width: 100%; height: 315px; }
+
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.servicio {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.btn-servicio {
+  background-color: #ffffff;
+  border: 2px solid #1f3b57;
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.btn-servicio img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-servicio span {
+  font-weight: bold;
+  color: #1f3b57;
+  font-size: 1.1rem;
+}
+
+.btn-servicio:hover {
+  transform: scale(1.03);
+}
+
+/* ...otros estilos anteriores... */
+
+.contenido-servicio {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.3s ease;
+  background-color: #f5f7fa;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 0 20px;
+}
+
+.contenido-servicio.activo {
+  max-height: 10px; /* ajusta si tu contenido es más largo */
+  padding: 10px;
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+
+
+</style>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (al final del body también) -->
+
 </head>
+<!-- Bootstrap JS Bundle (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <body>
 
 <header>
-  <img src="logi.jpg" alt="Logo SM" style="max-width: 100px;">
-  <h1>ESTUDIO SEMAC-TEC</h1>
-  <p>Abogados en Extranjería, Asilo y Mediación</p>
+  <img src="logi.jpg" alt="Logo SM" style="height: 150px; float: left; margin-right: 20px;">
+  <h1>ESTUDIO "SEMAS-TECH"</h1>
+  <p>Abogados en Extranjería, Inmigración y Asilo. Mediación Civil y Mercantil</p>
   <nav>
-    <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#servicios">Servicios</a>
     <a href="#videos">Galería</a>
@@ -39,33 +277,90 @@
   </nav>
 </header>
 
-<div class="hero" id="inicio">
-  <h1>Defendemos tus derechos en España</h1>
-  <p>Especialistas en Derecho de Extranjería, Asilo y Mediación Legal</p>
-  <a href="#contacto" class="btn">Solicita una consulta</a>
-</div>
-
-<section id="nosotros">
-  <h2>Sobre Nosotros</h2>
-  <img src="317930123_515354697279313_3207709769088937462_n.jpg" alt="Abogado Principal" style="width: 200px; float: right; margin-left: 20px;">
-  <p>En ESTUDIO SEMAC-TEC ofrecemos asesoría legal especializada a personas extranjeras en España. Contamos con un equipo de profesionales comprometidos con la justicia y la mediación, brindando atención personalizada y soluciones legales eficaces.</p>
+<section style="background-color: #e5ecf5; color: #000; padding: 30px 20px; text-align: center;">
+  <p style="font-size: 1.3rem; margin: 0;">
+    Especialistas en Derecho de Extranjería, Asilo y Mediación Legal
+  </p>
+  <a href="https://wa.me/51990191336" target="_blank" class="btn">
+  📱 Solicita una consulta por WhatsApp
+</a>
 </section>
 
-<section id="servicios">
+<section id="nosotros" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 40px; background-color: #e5ecf5;">
+  <div style="flex: 1 1 200px; min-width: 100px;">
+    <img src="img/abogado-principal.jpg" alt="Nuestro equipo legal" style="width: 100%; height: auto; border-radius: 8px;">
+      <img src="img/imagen3.jpg" alt="Equipo jurídico" style="width: 100%; height: auto; border-radius: 8px; margin-top: 20px;">
+  </div>
+  <div style="flex: 2 1 100px; min-width: 100px; text-align: justify;">
+    <h2 style="text-align: left;">Sobre Nosotros</h2>
+    <h3 style="text-align: left;">Estudio Jurídico con más de 20 años de experiencia al servicio de la justicia y la confianza</h3>
+    <p>En nuestro estudio jurídico, con sede en <strong>Perú</strong> y atención a clientes en <strong>España</strong>, contamos con más de 20 años de trayectoria ofreciendo asesoría legal ética, eficiente y cercana. Nos especializamos en brindar soluciones jurídicas sólidas en diversas ramas del Derecho: <strong>civil, penal, familia, sucesiones, laboral, administrativo</strong>, entre otras.</p>
+    <p>Durante estas dos décadas, hemos acompañado a personas, familias y empresas en la defensa de sus derechos, guiándolos con profesionalismo en cada etapa del proceso legal. Nuestro compromiso es brindar un servicio serio, humano y personalizado, sustentado en la experiencia y la confianza ganada a lo largo de los años.</p>
+    <p>Conscientes de la creciente migración de ciudadanos latinoamericanos —en especial peruanos— hacia España, hemos incorporado una nueva área especializada en <strong>Derecho Migratorio</strong>, orientada a brindar asesoría y representación en trámites como el <em>arraigo familiar, arraigo laboral, reagrupación familiar, regularización por circunstancias excepcionales, solicitudes de residencia y nacionalidad española</em>, entre otros.</p>
+    <p>Contamos con un equipo multidisciplinario de abogados en Perú y aliados estratégicos en España, que trabajan coordinadamente para ofrecer un acompañamiento completo y seguro en cada gestión migratoria. Nos enorgullece poder contribuir con el bienestar y la estabilidad legal de quienes buscan mejores oportunidades fuera de su país de origen.</p>
+    <p><strong>Tu tranquilidad legal, aquí y allá, en manos expertas.</strong></p>
+  </div>
+</section>
+<section id="servicios"> 
   <h2>Nuestros Servicios</h2>
+
+  <div class="servicios-grid">
+    <!-- Botón 1 -->
+    <div class="servicio">
+      <button class="btn-servicio" onclick="mostrarContenido('migra')">
+        <img src="img/extranjeria.jpg" alt="Extranjería">
+        <span>Extranjería, Inmigración y Asilo</span>
+      </button>
+    </div>
+
+    <!-- Botón 2 -->
+    <div class="servicio">
+      <button class="btn-servicio" onclick="mostrarContenido('juridicos')">
+        <img src="img/legales.jpg" alt="Servicios Jurídicos">
+        <span>Servicios Jurídicos</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Contenido dinámico mostrado abajo -->
+  <div class="contenido-servicio" id="migra">
   <ul>
-    <li><strong>Derecho de Extranjería:</strong> Visados, residencia, nacionalidad, arraigo.</li>
-    <li><strong>Asilo y Protección Internacional:</strong> Solicitudes de refugio, recursos, asesoramiento integral.</li>
-    <li><strong>Mediación:</strong> Familiar, intercultural, civil y comunitaria.</li>
+    <li>Arraigos: Socio educativo, Familiar, Social, Socio laboral y De Segunda Oportunidad.</li>
+    <li>Certificado de Antecedentes Penales apostillados.</li>
+    <li>Mediación Civil, Mercantil y Penal.</li>
+    <li>Homologaciones y Equivalencias de Títulos, Certificados de Estudios.</li>
   </ul>
+</div>
+
+<div class="contenido-servicio" id="juridicos">
+  <ul>
+    <li>Derecho Civil</li>
+    <li>Derecho Penal</li>
+    <li>Derecho Constitucional</li>
+    <li>Derecho Laboral</li>
+    <li>Derecho del Consumidor</li>
+    <li>Trámites Administrativos ante SUTRAN, SAT, MTC, ATU</li>
+  </ul>
+</div>
+
 </section>
 
 <section id="videos">
   <h2>Galería de Videos</h2>
-  <div class="video-gallery">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PL8yn1HphhvTwgynP3J9Fe_1bLsThYeE52" allowfullscreen></iframe>
-  </div>
+  <div class="video-galeria">
+  <video width="250" controls>
+      <source src="videos/nombre-del-video.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+   <!-- Segundo video (nuevo: TzfhUVdKJ5Q) -->
+  <iframe src="https://www.youtube.com/embed/TzfhUVdKJ5Q" title="Video 2" frameborder="0" allowfullscreen></iframe>
+
+  <!-- Tercer video (nuevo SHORT: uBCon3wMBaw) -->
+  <iframe src="https://www.youtube.com/embed/uBCon3wMBaw" title="Video 3" frameborder="0" allowfullscreen></iframe>
+</div>
+
 </section>
+
 
 <section id="blog">
   <h2>Blog</h2>
@@ -78,30 +373,98 @@
   <p><strong>¿Puedo solicitar nacionalidad española con residencia?</strong> Sí, analizamos tu caso particular.</p>
 </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <form action="#" method="POST">
-    <input type="text" name="nombre" placeholder="Tu nombre" required>
-    <input type="email" name="correo" placeholder="Tu correo" required>
-    <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-    <button type="submit">Enviar mensaje</button>
-  </form>
-  <p><strong>Ubicación:</strong> Madrid, España</p>
-  <iframe src="https://www.google.com/maps?q=Madrid,+España&output=embed"></iframe>
-  <div class="social-icons">
-    <p><strong>Redes Sociales:</strong></p>
-    <a href="https://www.facebook.com/EstudioSemacTech" target="_blank">Facebook</a> |
-    <a href="https://x.com/HOMEROSEGU48455" target="_blank">X</a> |
-    <a href="https://www.instagram.com/segura_maciel_abogados/" target="_blank">Instagram</a> |
-    <a href="https://www.tiktok.com/@estudiojuridicosegura?lang=es-419" target="_blank">TikTok</a>
+<section id="contacto" style="background-color: #f9f9f9; padding: 40px 20px;">
+  <h2 style="text-align: center;">Contáctanos</h2>
+
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  ">
+
+    <!-- FORMULARIO -->
+    <div style="flex: 1 1 300px; min-width: 280px;">
+      <form action="https://formsubmit.co/estudioseguramaciel.asociados@gmail.com" method="POST">
+        <label><strong>Nombres</strong></label>
+        <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 80%; padding: 10px; margin-bottom: 10px;">
+
+        <label><strong>E-mail</strong></label>
+        <input type="email" name="email" placeholder="Tu correo" required style="width: 80%; padding: 10px; margin-bottom: 10px;">
+
+        <label><strong>Teléfono</strong></label>
+        <input type="tel" name="telefono" placeholder="Teléfono o celular" required style="width: 80%; padding: 10px; margin-bottom: 10px;">
+
+        <label><strong>Mensaje</strong></label>
+        <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required style="width: 80%; padding: 10px; margin-bottom: 10px;"></textarea>
+
+        <!-- Campos ocultos -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://google.com"> <!-- Cámbialo si deseas -->
+
+        <button type="submit" style="padding: 10px 20px; background-color: #1f3b57; color: white; border: none; cursor: pointer; font-weight: bold;">Enviar mensaje</button>
+      </form>
+    </div>
+
+    <!-- INFORMACIÓN DE CONTACTO -->
+    <div style="flex: 1 1 300px; min-width: 280px;">
+      <h3>SEMAS-TECH</h3>
+      <p><strong>Horario:</strong><br>
+      🇪🇸 Lunes a Viernes: 9:00am – 6:00pm<br>
+      🇵🇪 Sábados: 9:00am – 1:00pm</p>
+
+      <p><strong>Teléfonos:</strong></p>
+      <ul style="padding-left: 20px;">
+        <li>📞 +51 990 191 336 / +51 931 191 885</li>
+        <li>📞 +34 614 250 419</li>
+      </ul>
+
+      <p><strong>Correo:</strong><br>
+        <a href="mailto:estudioseguramaciel.asociados@gmail.com">estudioseguramaciel.asociados@gmail.com</a>
+      </p>
+
+      <p><strong>Redes Sociales:</strong></p>
+      <div class="social-icons" style="font-size: 1.5rem;">
+        <a href="https://www.facebook.com/EstudioSemacTech" target="_blank" style="margin-right: 10px; color: #1f3b57;"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/segura_maciel_abogados/" target="_blank" style="margin-right: 10px; color: #1f3b57;"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/HOMEROSEGU48455" target="_blank" style="margin-right: 10px; color: #1f3b57;"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.tiktok.com/@estudiojuridicosegura" target="_blank" style="margin-right: 10px; color: #1f3b57;"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@EstudioSeguraAsociados" target="_blank" style="color: #1f3b57;"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- MAPA -->
+    <div style="flex: 1 1 300px; min-width: 280px;">
+      <h3>Ubicación</h3>
+      <iframe src="https://www.google.com/maps?q=Madrid,+España&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
   </div>
-  <p><a href="https://wa.me/34931191885" class="btn">Escríbenos por WhatsApp</a></p>
 </section>
 
+
 <footer>
-  <p>&copy; 2025 ESTUDIO SEMAC-TEC - Todos los derechos reservados.</p>
+  <p>&copy; 2025 ESTUDIO "SEMAS-TECH" - Todos los derechos reservados.</p>
   <p><a href="#" style="color: #ffc107;">Aviso Legal</a> | <a href="#" style="color: #ffc107;">Política de Privacidad</a></p>
 </footer>
+<script>
+  function mostrarContenido(id) {
+    const todos = document.querySelectorAll('.contenido-servicio');
+    todos.forEach(div => {
+      if (div.id === id) {
+        div.classList.toggle('activo');
+      } else {
+        div.classList.remove('activo');
+      }
+    });
+  }
+</script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/51931191885?text=Hola%2C%20quisiera%20más%20información%20legal." class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 </body>
 </html>
